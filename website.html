@@ -1,0 +1,620 @@
+<html>
+	<head>
+		<style>
+			body
+			{
+				overflow-x: hidden;
+			}
+			#purplebackground
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#background
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#gradient
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#gradient2
+			{
+				position: absolute;
+				opacity: 0.4;
+				pointer-events: none;
+			}
+			#logo
+			{
+				position: absolute;
+				opacity: 1;
+				pointer-events: none;
+			}
+			#year
+			{
+				position: absolute;
+				opacity: 0.25;
+				pointer-events: none;
+			}
+			#bottomtab
+			{
+				position: absolute;
+				opacity: 0.5;
+				pointer-events: none;
+			}
+			#gmail
+			{
+				position: absolute;
+				opacity: 0;
+			}
+			#discord
+			{
+				position: absolute;
+				opacity: 0;
+			}
+			#instagram
+			{
+				position: absolute;
+				opacity: 0;
+			}
+			#contactus
+			{
+				position: absolute;
+			}
+			#overview
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#competition
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#schedule
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#whenwhere
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#prizes
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#handouts
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#sponsors
+			{
+				position: absolute;
+				pointer-events: none;
+			}
+			#sponsor1
+			{
+				position: absolute;
+			}
+			#sponsor2
+			{
+				position: absolute;
+			}
+			#sponsor3
+			{
+				position: absolute;
+			}
+			#sponsor4
+			{
+				position: absolute;
+			}
+			#sponsor5
+			{
+				position: absolute;
+			}
+			#sponsor6
+			{
+				position: absolute;
+			}
+			#sponsor7
+			{
+				position: absolute;
+			}
+			#sponsor8
+			{
+				position: absolute;
+			}
+			#register
+			{
+				position: absolute;
+			}
+			#sponsorpackage
+			{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<img id = "purplebackground" src = "purplebackground6.jpg">
+		<video id = "background" playsinline autoplay muted loop>
+			<source src = "background4.mp4" type = "video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<img id = "gradient" src = "gradient3.png">
+		<img id = "gradient2" src = "gradient2.png">
+		<img id = "year" src = "year2.png">
+		<img id = "logo" src = "logo2.png">
+		<img id = "bottomtab" src = "bottomTab.png">
+		<img id = "gmail" src = "gmail.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "discord" src = "discord.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "instagram" src = "instagram.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "contactus" src = "contactus.png">
+		<img id = "sponsorpackage" src = "sponsorpackage.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "overview" src = "overview.png">
+		<img id = "competition" src = "competition.png">
+		<img id = "schedule" src = "schedule.png">
+		<img id = "whenwhere" src = "whenwhere.png">
+		<img id = "prizes" src = "prizes.png">
+		<img id = "handouts" src = "handouts.png">
+		<img id = "sponsors" src = "sponsors.png">
+		<img id = "sponsor1" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "sponsor2" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "sponsor3" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "sponsor4" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "sponsor5" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "sponsor6" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "sponsor7" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "sponsor8" src = "sponsor1.png" onmouseover = "" style = "cursor: pointer;">
+		<img id = "register" src = "register.png" onmouseover = "" style = "cursor: pointer;">
+		<script>
+			var purplebackgroundTop;
+			var bottomtabWidth;
+			var bottomtabHeight;
+			
+			var logoWidth;
+			var logoLeft;
+			var logoTop;
+			
+			var yearWidth;
+			var yearLeft;
+			var yearTop;
+			
+			var sponsorsWidth;
+			var sponsorsLeft;
+			var sponsorsTop;
+			
+			var sponsorWidth;
+			
+			var sponsor1Left;
+			var sponsor1Top;
+			var sponsor2Left;
+			var sponsor2Top;
+			var sponsor3Left;
+			var sponsor3Top;
+			var sponsor4Left;
+			var sponsor4Top;
+			var sponsor5Left;
+			var sponsor5Top;
+			var sponsor6Left;
+			var sponsor6Top;
+			var sponsor7Left;
+			var sponsor7Top;
+			var sponsor8Left;
+			var sponsor8Top;
+			
+			var registerWidth;
+			var registerLeft;
+			var registerTop;
+			var registerOn;
+			var registerAnimate = 0;
+			
+			var gmailWidth;
+			var gmailLeft;
+			var gmailTop;
+			var gmailOn;
+			var gmailAnimate = 0;
+			
+			var discWidth;
+			var discLeft;
+			var discTop;
+			var discOn;
+			var discAnimate = 0;
+			
+			var instaWidth;
+			var instaLeft;
+			var instaTop;
+			var instaOn;
+			var instaAnimate = 0;
+			
+			var infoWidth;
+			var infoHeight;
+			
+			var overviewLeft;
+			var overviewTop;
+			var compLeft;
+			var compTop;
+			var scheLeft;
+			var scheTop;
+			var whwhLeft;
+			var whwhTop;
+			var prizLeft;
+			var prizTop;
+			var handoutsLeft;
+			var handoutsTop;
+			
+			setInterval(animate, 10);
+			
+			var tick = 0;
+			
+			var scrollPos;
+			var scrollYpos;
+			window.addEventListener("scroll", function(help)
+			{
+				scrollYpos = this.scrollY;
+				scrollPos = this.scrollY / (window.innerWidth * 1080 / 1920 + window.innerWidth * 2160 / 3840 - window.innerHeight - 20);
+				console.log(scrollPos);
+			});
+			
+			//register button
+			document.getElementById("register").addEventListener("mouseover", function()
+			{
+				registerOn = true;
+			});
+			document.getElementById("register").addEventListener("mouseout", function()
+			{
+				registerOn = false;
+			});
+			document.getElementById("register").addEventListener("mousedown", function()
+			{
+				window.open("https://forms.gle/6gqdnzbQ2WbdH3V79", "_blank");
+			});
+			
+			//sponsorship package button
+			document.getElementById("sponsorpackage").addEventListener("mousedown", function()
+			{
+				window.open("https://drive.google.com/file/d/16TvtWo6NnUxkSZmCupUi2DgBRWMVC_8u/view?usp=sharing", "_blank");
+			});
+			
+			//gmail, discord, instagram buttons
+			document.getElementById("gmail").addEventListener("mouseover", function()
+			{
+				gmailOn = true;
+			});
+			document.getElementById("gmail").addEventListener("mouseout", function()
+			{
+				gmailOn = false;
+			});
+			document.getElementById("gmail").addEventListener("mousedown", function()
+			{
+				window.open("mailto:mchackathon23@gmail.com", "_blank");
+			});
+			document.getElementById("discord").addEventListener("mouseover", function()
+			{
+				discOn = true;
+			});
+			document.getElementById("discord").addEventListener("mouseout", function()
+			{
+				discOn = false;
+			});
+			document.getElementById("discord").addEventListener("mousedown", function()
+			{
+				window.open("https://discord.gg/BwhSXVmUHe", "_blank");
+			});
+			document.getElementById("instagram").addEventListener("mouseover", function()
+			{
+				instaOn = true;
+			});
+			document.getElementById("instagram").addEventListener("mouseout", function()
+			{
+				instaOn = false;
+			});
+			document.getElementById("instagram").addEventListener("mousedown", function()
+			{
+				window.open("https://www.instagram.com/ricky34801/", "_blank");
+			});
+			
+			function animate()
+			{
+				var pageBottom = window.innerWidth * (1080 / 1920) + window.innerWidth * (2160 / 3840) * 1.325;
+				
+				//1920 by 1080
+				background.style.left = 0 + "px";
+				background.style.top = -10 * (window.innerWidth / 1280) + "px";
+				background.style.width = window.innerWidth + "px";
+				
+				//3840 by 2160
+				purplebackgroundTop = -10 * (window.innerWidth / 1280) + parseInt(background.style.width.slice(0, -2)) * 1080 / 1920;
+				purplebackground.style.left = 0 + "px";
+				purplebackground.style.top = purplebackgroundTop + "px";
+				purplebackground.style.width = window.innerWidth + "px";
+				purplebackground.style.height = purplebackgroundTop * 1.325 + "px";
+				
+				gradient.style.left = 0 + "px";
+				gradient.style.top = purplebackgroundTop - 0.5 * window.innerWidth * 381 / 957 + "px";
+				gradient.style.width = window.innerWidth + "px";
+				
+				gradient2.style.left = 0 + "px";
+				gradient2.style.top = purplebackgroundTop - 0.5 * window.innerWidth * 1.33 * 381 / 958 + "px";
+				gradient2.style.width = window.innerWidth * 1.33 + "px";
+				
+				contactus.style.left = window.innerWidth * 0.05;
+				contactus.style.top = pageBottom - window.innerWidth * 0.25 * (99 / 513) - 10 * (window.innerWidth / 1280);
+				contactus.style.width = window.innerWidth * 0.33;
+				
+				sponsorpackage.style.left = window.innerWidth * 0.675;
+				sponsorpackage.style.top = pageBottom - window.innerWidth * 0.25 * (20 / 270) - 41.5 * (window.innerWidth / 1280);
+				sponsorpackage.style.width = window.innerWidth * 0.1875;
+				
+				//959 by 99
+				
+				bottomtabWidth = window.innerWidth * 1.325;
+				bottomtabHeight = 70 * (window.innerWidth / 1280);
+				bottomtab.style.left = 0 + "px";
+				bottomtab.style.top = pageBottom - bottomtabHeight - 23 * (window.innerWidth / 1280) + "px";
+				bottomtab.style.width = bottomtabWidth + "px";
+				bottomtab.style.height = bottomtabHeight + "px";
+			
+				logoWidth = window.innerWidth * 0.5;
+				logoLeft = window.innerWidth / 2 - logoWidth / 2 + Math.sin(tick) * 10 * (window.innerWidth / 1280);
+				logoTop = window.innerWidth * 0.125 - (logoWidth * 163 / 567) / 2 + Math.cos(tick) * 10 * (window.innerWidth / 1280);
+				logo.style.left = logoLeft + "px";
+				logo.style.top = logoTop + "px";
+				logo.style.width = logoWidth + "px";
+				logo.style.transform = "rotate(" + Math.sin(tick) * 3 + "deg)";
+				logo.style.opacity = (logoTop + logoWidth * 163 / 567 - scrollYpos) / (logoTop + logoWidth * 163 / 567) - 0.05;
+				
+				//106 by 465
+				
+				yearWidth = window.innerWidth * 0.66;
+				yearLeft = window.innerWidth / 2 - yearWidth / 2 + Math.sin(tick * 2) * 10 * (window.innerWidth / 1280);
+				yearTop = window.innerWidth * 0.125 - (yearWidth * 106 / 465) / 2 + Math.cos(tick * 2) * 10 * (window.innerWidth / 1280);
+				year.style.left = yearLeft + "px";
+				year.style.top = yearTop + "px";
+				year.style.width = yearWidth + "px";
+				year.style.transform = "rotate(" + Math.sin(tick * 2) * 3 + "deg)";
+				year.style.opacity = 0.25 * ((yearTop + yearWidth * 106 / 465 - scrollYpos) / (yearTop + yearWidth * 106 / 465) - 0.05);
+				
+				//180 by 824
+				
+				sponsorsWidth = window.innerWidth * 0.33;
+				sponsorsLeft = window.innerWidth / 2 - sponsorsWidth / 2 + Math.sin(tick + Math.PI / 4) * 10 * (window.innerWidth / 1280);
+				sponsorsTop = window.innerWidth * 0.8075 - (sponsorsWidth * 180 / 824) / 2 + Math.cos(tick * 2) * 10 * (window.innerWidth / 1280);
+				sponsors.style.left = sponsorsLeft + "px";
+				sponsors.style.top = sponsorsTop + "px";
+				sponsors.style.width = sponsorsWidth + "px";
+				sponsors.style.transform = "rotate(" + Math.sin(tick + Math.PI / 4) * 3 + "deg)";
+				sponsors.style.opacity = 1 - Math.abs(((sponsorsTop + (sponsorsWidth * 180 / 824) * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				//Squares
+				
+				sponsorWidth = window.innerWidth * 0.15;
+				
+				sponsor1Left = window.innerWidth * 0.2 - sponsorWidth / 2 + Math.cos(tick * 0.5 + Math.PI / 2) * 10 * (window.innerWidth / 1280);
+				sponsor1Top = window.innerWidth * 0.945 - sponsorWidth / 2 + Math.sin(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor1.style.left = sponsor1Left + "px";
+				sponsor1.style.top = sponsor1Top + "px";
+				sponsor1.style.width = sponsorWidth + "px";
+				sponsor1.style.transform = "rotate(" + Math.cos(tick * 0.5 + Math.PI / 2) * 3 + "deg)";
+				sponsor1.style.opacity = 1 - Math.abs(((sponsor1Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				sponsor2Left = window.innerWidth  * 0.4 - sponsorWidth / 2 + Math.sin(tick * 0.5 + Math.PI / 2) * 10 * (window.innerWidth / 1280);
+				sponsor2Top = window.innerWidth * 0.945 - sponsorWidth / 2 + Math.sin(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor2.style.left = sponsor2Left + "px";
+				sponsor2.style.top = sponsor2Top + "px";
+				sponsor2.style.width = sponsorWidth + "px";
+				sponsor2.style.transform = "rotate(" + Math.sin(tick + Math.PI / 2) * 3 + "deg)";
+				sponsor2.style.opacity = 1 - Math.abs(((sponsor2Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				sponsor3Left = window.innerWidth * 0.6 - sponsorWidth / 2 + Math.sin(tick * 0.5 + Math.PI / 4) * 10 * (window.innerWidth / 1280);
+				sponsor3Top = window.innerWidth * 0.945 - sponsorWidth / 2 + Math.cos(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor3.style.left = sponsor3Left + "px";
+				sponsor3.style.top = sponsor3Top + "px";
+				sponsor3.style.width = sponsorWidth + "px";
+				sponsor3.style.transform = "rotate(" + Math.cos(tick * 0.5 + Math.PI / 4) * 3 + "deg)";
+				sponsor3.style.opacity = 1 - Math.abs(((sponsor3Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				sponsor4Left = window.innerWidth * 0.8 - sponsorWidth / 2 + Math.cos(tick * 0.5 + Math.PI / 4) * 10 * (window.innerWidth / 1280);
+				sponsor4Top = window.innerWidth * 0.945 - sponsorWidth / 2 + Math.cos(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor4.style.left = sponsor4Left + "px";
+				sponsor4.style.top = sponsor4Top + "px";
+				sponsor4.style.width = sponsorWidth + "px";
+				sponsor4.style.transform = "rotate(" + Math.sin(tick * 0.5 + Math.PI / 4) * 3 + "deg)";
+				sponsor4.style.opacity = 1 - Math.abs(((sponsor4Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				sponsor5Left = window.innerWidth * 0.2 - sponsorWidth / 2 + Math.cos(tick * 0.5 + Math.PI / 4) * 10 * (window.innerWidth / 1280);
+				sponsor5Top = window.innerWidth * 1.1375 - sponsorWidth / 2 + Math.sin(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor5.style.left = sponsor5Left + "px";
+				sponsor5.style.top = sponsor5Top + "px";
+				sponsor5.style.width = sponsorWidth + "px";
+				sponsor5.style.transform = "rotate(" + Math.cos(tick * 0.5 + Math.PI / 4) * 3 + "deg)";
+				sponsor5.style.opacity = 1 - Math.abs(((sponsor5Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				sponsor6Left = window.innerWidth * 0.4 - sponsorWidth / 2 + Math.sin(tick * 0.5 + Math.PI / 4) * 10 * (window.innerWidth / 1280);
+				sponsor6Top = window.innerWidth * 1.1375 - sponsorWidth / 2 + Math.sin(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor6.style.left = sponsor6Left + "px";
+				sponsor6.style.top = sponsor6Top + "px";
+				sponsor6.style.width = sponsorWidth + "px";
+				sponsor6.style.transform = "rotate(" + Math.sin(tick * 0.5 + Math.PI / 4) * 3 + "deg)";
+				sponsor6.style.opacity = 1 - Math.abs(((sponsor6Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				sponsor7Left = window.innerWidth * 0.6 - sponsorWidth / 2 + Math.sin(tick * 0.5 + Math.PI / 2) * 10 * (window.innerWidth / 1280);
+				sponsor7Top = window.innerWidth * 1.1375 - sponsorWidth / 2 + Math.cos(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor7.style.left = sponsor7Left + "px";
+				sponsor7.style.top = sponsor7Top + "px";
+				sponsor7.style.width = sponsorWidth + "px";
+				sponsor7.style.transform = "rotate(" + Math.cos(tick * 0.5 + Math.PI / 2) * 3 + "deg)";
+				sponsor7.style.opacity = 1 - Math.abs(((sponsor7Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				sponsor8Left = window.innerWidth * 0.8 - sponsorWidth / 2 + Math.cos(tick * 0.5 + Math.PI / 2) * 10 * (window.innerWidth / 1280);
+				sponsor8Top = window.innerWidth * 1.1375 - sponsorWidth / 2 + Math.cos(tick * 0.5) * 10 * (window.innerWidth / 1280);
+				sponsor8.style.left = sponsor8Left + "px";
+				sponsor8.style.top = sponsor8Top + "px";
+				sponsor8.style.width = sponsorWidth + "px";
+				sponsor8.style.transform = "rotate(" + Math.sin(tick * 0.5 + Math.PI / 2) * 3 + "deg)";
+				sponsor8.style.opacity = 1 - Math.abs(((sponsor8Top + sponsorWidth * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				//960 by 720
+				
+				infoWidth = window.innerWidth * 0.3;
+				infoHeight = infoWidth * 960 / 720;
+				
+				overviewLeft = window.innerWidth * 0.175 - infoWidth / 2;
+				overviewTop = window.innerWidth * 0.55 - infoHeight / 2;
+				overview.style.left = overviewLeft + "px";
+				overview.style.top = overviewTop + "px";
+				overview.style.width = infoWidth + "px";
+				overview.style.opacity = 1 - Math.abs(((overviewTop + infoHeight * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				compLeft = window.innerWidth * 0.5 - infoWidth / 2;
+				compTop = window.innerWidth * 0.55 - infoHeight / 2;
+				competition.style.left = compLeft + "px";
+				competition.style.top = compTop + "px";
+				competition.style.width = infoWidth + "px";
+				competition.style.opacity = 1 - Math.abs(((compTop + infoHeight * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				scheLeft = window.innerWidth * 0.825 - infoWidth / 2;
+				scheTop = window.innerWidth * 0.55 - infoHeight / 2;
+				schedule.style.left = scheLeft + "px";
+				schedule.style.top = scheTop + "px";
+				schedule.style.width = infoWidth + "px";
+				schedule.style.opacity = 1 - Math.abs(((scheTop + infoHeight * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				whwhLeft = window.innerWidth * 0.175 - infoWidth / 2;
+				whwhTop = window.innerWidth * 0.75 - infoHeight / 2;
+				whenwhere.style.left = whwhLeft + "px";
+				whenwhere.style.top = whwhTop + "px";
+				whenwhere.style.width = infoWidth + "px";
+				whenwhere.style.opacity = 1 - Math.abs(((whwhTop + infoHeight * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				prizLeft = window.innerWidth * 0.5 - infoWidth / 2;
+				prizTop = window.innerWidth * 0.75 - infoHeight / 2;
+				prizes.style.left = prizLeft + "px";
+				prizes.style.top = prizTop + "px";
+				prizes.style.width = infoWidth + "px";
+				prizes.style.opacity = 1 - Math.abs(((prizTop + infoHeight * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				handoutsLeft = window.innerWidth * 0.825 - infoWidth / 2;
+				handoutsTop = window.innerWidth * 0.75 - infoHeight / 2;
+				handouts.style.left = handoutsLeft + "px";
+				handouts.style.top = handoutsTop + "px";
+				handouts.style.width = infoWidth + "px";
+				handouts.style.opacity = 1 - Math.abs(((handoutsTop + infoHeight * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280));
+				
+				//136 by 509
+				
+				if (registerOn)
+				{
+					if (registerAnimate < 0.95)
+					{
+						registerAnimate += (1 - registerAnimate) / 20;
+					}					
+				}
+				else
+				{
+					if (registerAnimate > 0)
+					{
+						registerAnimate /= 1.2;
+					}	
+				}
+				
+				
+				logoWidth = window.innerWidth * 0.5;
+				logoLeft = window.innerWidth / 2 - logoWidth / 2 + Math.sin(tick) * 10 * (window.innerWidth / 1280);
+				logoTop = window.innerWidth * 0.125 - (logoWidth * 163 / 567) / 2 + Math.cos(tick) * 10 * (window.innerWidth / 1280);
+				logo.style.left = logoLeft + "px";
+				logo.style.top = logoTop + "px";
+				logo.style.width = logoWidth + "px";
+				logo.style.transform = "rotate(" + Math.sin(tick) * 3 + "deg)";
+				logo.style.opacity = (logoTop + (logoWidth * 163 / 567) - scrollYpos) / (logoTop + logoWidth * 163 / 567) - 0.05;
+				
+				registerWidth = window.innerWidth * 0.25 * (1 + 0.2 * registerAnimate)
+				registerLeft = window.innerWidth * 0.5 - registerWidth / 2 + Math.cos(tick * 0.5 + Math.PI / 8) * 10 * (window.innerWidth / 1280);
+				registerTop = window.innerWidth * 0.29125 - registerWidth * 136 / 509 / 2 + Math.cos(tick * 0.5 - Math.PI / 8) * 10 * (window.innerWidth / 1280);
+				register.style.width = registerWidth + "px";
+				register.style.left = registerLeft + "px";
+				register.style.top = registerTop + "px";
+				register.style.transform = "rotate(" + Math.sin(tick * 0.5 - Math.PI / 2) * 3 + "deg)";
+				register.style.opacity = 0.5 + 0.25 * (1 - Math.abs(((registerTop + (registerWidth * 136 / 509) * 0.25 - scrollYpos) - window.innerHeight / 2) / (400 * window.innerWidth / 1280))) + 0.25 * registerAnimate / 2;
+				
+				//Squares
+				
+				if (gmailOn)
+				{
+					if (gmailAnimate < 0.95)
+					{
+						gmailAnimate += (1 - gmailAnimate) / 20;
+					}					
+				}
+				else
+				{
+					if (gmailAnimate > 0)
+					{
+						gmailAnimate /= 1.2;
+					}	
+				}
+				
+				gmailWidth = window.innerWidth * 0.025 * (1 + 0.2 * gmailAnimate)
+				gmailLeft = window.innerWidth * 0.45 - gmailWidth / 2;
+				gmailTop = pageBottom - 57.5 * (window.innerWidth / 1280) - gmailWidth / 2;
+				gmail.style.width = gmailWidth + "px";
+				gmail.style.left = gmailLeft + "px";
+				gmail.style.top = gmailTop + "px";
+				gmail.style.opacity = 0.5 + gmailAnimate / 2;
+				
+				if (discOn)
+				{
+					if (discAnimate < 0.95)
+					{
+						discAnimate += (1 - discAnimate) / 20;
+					}					
+				}
+				else
+				{
+					if (discAnimate > 0)
+					{
+						discAnimate /= 1.2;
+					}	
+				}
+				
+				discWidth = window.innerWidth * 0.025 * (1 + 0.2 * discAnimate)
+				discLeft = window.innerWidth * 0.5 - discWidth / 2;
+				discTop = pageBottom - 57.5 * (window.innerWidth / 1280) - discWidth / 2;
+				discord.style.width = discWidth + "px";
+				discord.style.left = discLeft + "px";
+				discord.style.top = discTop + "px";
+				discord.style.opacity = 0.5 + discAnimate / 2;
+				
+				if (instaOn)
+				{
+					if (instaAnimate < 0.95)
+					{
+						instaAnimate += (1 - instaAnimate) / 20;
+					}					
+				}
+				else
+				{
+					if (instaAnimate > 0)
+					{
+						instaAnimate /= 1.2;
+					}	
+				}
+				
+				instaWidth = window.innerWidth * 0.025 * (1 + 0.2 * instaAnimate)
+				instaLeft = window.innerWidth * 0.55 - instaWidth / 2;
+				instaTop = pageBottom - 57.5 * (window.innerWidth / 1280) - instaWidth / 2;
+				instagram.style.width = instaWidth + "px";
+				instagram.style.left = instaLeft + "px";
+				instagram.style.top = instaTop + "px";
+				instagram.style.opacity = 0.5 + instaAnimate / 2;
+				
+				tick += Math.PI / 256;
+			}
+		</script>
+	</body>
+</html>
